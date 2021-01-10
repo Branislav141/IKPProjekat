@@ -18,5 +18,13 @@
     <ClCompile Include="Replikator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Metode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Header1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

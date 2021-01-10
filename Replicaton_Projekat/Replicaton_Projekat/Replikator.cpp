@@ -8,6 +8,7 @@
 
 bool InitializeWindowsSockets();
 
+
 int  main(void)
 {
 	// Socket used for listening for new clients 
@@ -134,6 +135,7 @@ int  main(void)
 				{
 					if (FD_ISSET(acceptedSocket[i], &set))
 					{
+						
 						iResult = recv(acceptedSocket[i], recvbuf, DEFAULT_BUFLEN, 0);
 						if (iResult > 0)
 						{

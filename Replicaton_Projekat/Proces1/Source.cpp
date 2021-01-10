@@ -22,7 +22,7 @@ int __cdecl main()
 	// variable used to store function return value
 	int iResult;
 	// message to send
-	char messageToSend[1000];
+	int messageToSend[1000];
 
 
 	if (InitializeWindowsSockets() == false)
@@ -60,9 +60,9 @@ int __cdecl main()
 	do
 	{
 
-		printf("Unesi poruku: ");
-		gets_s(messageToSend, 1000);
-		iResult = send(connectSocket, messageToSend, (int)strlen(messageToSend) + 1, 0);
+		printf("Unesi ID procesa: ");
+		gets_s((char*)messageToSend, 1000);
+		iResult = send(connectSocket, (char*)messageToSend, (int)strlen((char*)messageToSend) + 1, 0);
 
 		if (iResult == SOCKET_ERROR)
 		{
